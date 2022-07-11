@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<Snoopy revision="0" version="0">
+  <pnml>
+    <net id="1" name="Planta" type="IOPT">
+      <input/>
+      <output/>
+      <variable/>
+      <place id="2">
+        <name>
+          <text>Inicio do projeto</text>
+          <graphics>
+            <offset x="-30" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="370" y="210"/>
+        </graphics>
+      </place>
+      <transition id="3">
+        <name>
+          <text>Definicoes iniciais</text>
+          <graphics>
+            <offset x="-30" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="650" y="210"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="4">
+        <name>
+          <text>Dados iniciais</text>
+          <graphics>
+            <offset x="-50" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="830" y="210"/>
+        </graphics>
+      </place>
+      <place id="5">
+        <name>
+          <text>Catacteristicas da edficacao</text>
+          <graphics>
+            <offset x="-60" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="570" y="370"/>
+        </graphics>
+      </place>
+      <place id="6">
+        <name>
+          <text>Taxa de ocupacao</text>
+          <graphics>
+            <offset x="-50" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="570" y="320"/>
+        </graphics>
+      </place>
+      <place id="7">
+        <name>
+          <text>Consumo de agua potavel</text>
+          <graphics>
+            <offset x="-70" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="570" y="270"/>
+        </graphics>
+      </place>
+      <arc id="8" source="5" target="3">
+        <type>normal</type>
+        <graphics>
+          <offset x="70" y="10"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-6" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="9" source="6" target="3">
+        <type>normal</type>
+        <graphics>
+          <offset x="60" y="20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-9" y="3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="10" source="7" target="3">
+        <type>normal</type>
+        <graphics>
+          <offset x="60" y="20"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-9" y="7"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="11" source="2" target="3">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="12" source="3" target="4">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-2" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="13">
+        <name>
+          <text>Calculo da caixa de gordura</text>
+          <graphics>
+            <offset x="-50" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1020" y="210"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="14">
+        <name>
+          <text>NBR 8160/1999</text>
+          <graphics>
+            <offset x="-10" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="1110" y="100"/>
+        </graphics>
+      </place>
+      <arc id="19" source="4" target="13">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="20">
+        <name>
+          <text>Contribuicao diaria de esgoto</text>
+          <graphics>
+            <offset x="-50" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="630" y="560"/>
+        </graphics>
+      </place>
+      <transition id="21">
+        <name>
+          <text>Calculo do tratamento de esgoto</text>
+          <graphics>
+            <offset x="40" y="0"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="900" y="690"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="23" source="4" target="21">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="0"/>
+          <offset x="100" y="-110"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="24" source="13" target="14">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="0"/>
+          <offset x="50" y="10"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="12"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="25">
+        <name>
+          <text>Adequacao normativa</text>
+          <graphics>
+            <offset x="-30" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1000" y="100"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="26" source="14" target="25">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="0"/>
+          <offset x="40" y="-10"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="27" source="25" target="4">
+        <type>normal</type>
+        <graphics>
+          <offset x="-70" y="10"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="28">
+        <name>
+          <text>Dimensionamento da fossa septica</text>
+          <graphics>
+            <offset x="-80" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="120" y="680"/>
+        </graphics>
+      </place>
+      <place id="29">
+        <name>
+          <text>Dimensionamento do filtro anaerobio</text>
+          <graphics>
+            <offset x="-10" y="40"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="40" y="780"/>
+        </graphics>
+      </place>
+      <transition id="30">
+        <name>
+          <text>Anallise de dados</text>
+          <graphics>
+            <offset x="40" y="-30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="340" y="680"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <transition id="31">
+        <name>
+          <text>tr_31</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="660" y="1020"/>
+        </graphics>
+      </transition>
+      <place id="32">
+        <name>
+          <text>Dimensionamento da fossa septica (camara em serie)</text>
+          <graphics>
+            <offset x="-80" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="120" y="590"/>
+        </graphics>
+      </place>
+      <place id="33">
+        <name>
+          <text>Dimensionamento do sumidouro</text>
+          <graphics>
+            <offset x="-70" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="890" y="1020"/>
+        </graphics>
+      </place>
+      <arc id="34" source="30" target="28">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="35" source="30" target="32">
+        <type>normal</type>
+        <graphics>
+          <offset x="-10" y="-60"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-3" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="38">
+        <name>
+          <text>Lodo fresco</text>
+          <graphics>
+            <offset x="-20" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="630" y="630"/>
+        </graphics>
+      </place>
+      <place id="39">
+        <name>
+          <text>Periodo de detencao dos despejos</text>
+          <graphics>
+            <offset x="-70" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="630" y="700"/>
+        </graphics>
+      </place>
+      <place id="40">
+        <name>
+          <text>Acumulacao total de lodo</text>
+          <graphics>
+            <offset x="-50" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="630" y="770"/>
+        </graphics>
+      </place>
+      <arc id="41" source="21" target="20">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="0"/>
+          <offset x="130" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-5" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="42" source="21" target="38">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-2" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="43" source="21" target="39">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="44" source="21" target="40">
+        <type>normal</type>
+        <graphics>
+          <offset x="20" y="50"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="4" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="45" source="20" target="30">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="0"/>
+          <offset x="20" y="-60"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="46" source="38" target="30">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="47" source="39" target="30">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="48" source="40" target="30">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="0"/>
+          <offset x="50" y="50"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-2" y="14"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="49" source="30" target="29">
+        <type>normal</type>
+        <graphics>
+          <offset x="-20" y="60"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="5" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="51">
+        <name>
+          <text>Ensaio de infiltracao do solo</text>
+          <graphics>
+            <offset x="-50" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="460" y="980"/>
+        </graphics>
+      </place>
+      <place id="52">
+        <name>
+          <text>Raio do sumidouro</text>
+          <graphics>
+            <offset x="-40" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="460" y="1060"/>
+        </graphics>
+      </place>
+      <arc id="62" source="30" target="4">
+        <type>normal</type>
+        <graphics>
+          <offset x="100" y="-190"/>
+          <offset x="210" y="250"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-6" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="63" source="30" target="51">
+        <type>normal</type>
+        <graphics>
+          <offset x="-50" y="180"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="9" y="1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="64" source="30" target="52">
+        <type>normal</type>
+        <graphics>
+          <offset x="0" y="0"/>
+          <offset x="-120" y="40"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="9" y="2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="65" source="51" target="31">
+        <type>normal</type>
+        <graphics>
+          <offset x="120" y="0"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="66" source="52" target="31">
+        <type>normal</type>
+        <graphics>
+          <offset x="40" y="0"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-1" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="67" source="31" target="33">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+    </net>
+  </pnml>
+</Snoopy>

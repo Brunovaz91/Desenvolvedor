@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<Snoopy revision="0" version="0">
+  <pnml>
+    <net id="1" name="robo_1" type="IOPT">
+      <input/>
+      <output/>
+      <variable/>
+      <place id="2">
+        <name>
+          <text>Robo dispon</text>
+          <graphics>
+            <offset x="-20" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="190" y="380"/>
+        </graphics>
+      </place>
+      <transition id="3">
+        <name>
+          <text>t1</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="330" y="380"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="4">
+        <name>
+          <text>Robo carregando bloco</text>
+          <graphics>
+            <offset x="-10" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="20" y="-30"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="740" y="380"/>
+        </graphics>
+      </place>
+      <transition id="6">
+        <name>
+          <text>t4</text>
+          <graphics>
+            <offset x="20" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="1120" y="380"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="7" source="2" target="3">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="9" y="8"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="10" source="6" target="2">
+        <type>normal</type>
+        <graphics>
+          <offset x="40" y="-30"/>
+          <offset x="300" y="-350"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-4" y="13"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="11">
+        <name>
+          <text>Solicitacao</text>
+          <graphics>
+            <offset x="-10" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="490" y="380"/>
+        </graphics>
+      </place>
+      <transition id="12">
+        <name>
+          <text>t2</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="640" y="380"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <arc id="13" source="3" target="11">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="14" source="11" target="12">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="15" source="12" target="4">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <transition id="16">
+        <name>
+          <text>t3</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="870" y="380"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <place id="17">
+        <name>
+          <text>Robo descarregando bloco</text>
+          <graphics>
+            <offset x="-10" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="960" y="380"/>
+        </graphics>
+      </place>
+      <arc id="18" source="4" target="16">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="19" source="16" target="17">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="20" source="17" target="6">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="21">
+        <name>
+          <text>robo indis</text>
+          <graphics>
+            <offset x="10" y="30"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="960" y="550"/>
+        </graphics>
+      </place>
+      <arc id="28" source="3" target="21">
+        <type>normal</type>
+        <graphics>
+          <offset x="40" y="130"/>
+          <offset x="0" y="0"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="3" y="-4"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="29" source="12" target="21">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="4" y="-3"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="30" source="16" target="21">
+        <type>normal</type>
+        <graphics/>
+        <inscription>
+          <graphics>
+            <offset page="1" x="8" y="1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+    </net>
+  </pnml>
+</Snoopy>
