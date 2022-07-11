@@ -1,0 +1,23 @@
+O presente desenvolvimento tem como proposta o cálculo de um sistema individual de 
+esgotamento sanitário que para o programa desenvolvido se consiste na utilização 
+de filtro anaeróbico como câmara de pós-tratamento e sumidouro como câmara para 
+disposição final do efluente tratado. Portanto, o desenvolvimento traz, usando 
+o software Octave -com adaptações em Python - um modelo de
+cálculo para dimensionamento de um sistema individual de tratamento e disposição final
+de esgoto sanitário. Além disso, o presente estudo demonstrar  o dimensionamento de um
+sistema individual de tratamento e disposição final de esgotamento sanitário o qual simula
+a aplicação em lotes situados em Caçador, Santa Catarina, numa residência composta por 6
+moradores. A solução adotada consiste em um sistema composto de Tanque Séptico, Filtro
+anaeróbico e Sumidouro para disposição final.
+
+
+A ferramenta ainda está em fase de aprimoramento, como sugestão para trabalhos futuros, 
+pode-se pensar em adaptar esse script para outros tipos de pós-tratamento e disposição
+final do efluente sanitário, como: filtros de areia e valas de infiltração.
+
+
+E-mail:brunovaz91@gmail.com
+
+
+Desenvolvido por
+Brunovaz91
